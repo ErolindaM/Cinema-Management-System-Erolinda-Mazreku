@@ -1,0 +1,50 @@
+<div class="container justify">
+    <div class="row justify-content-center">
+      <div class="col-lg-1">
+        <a class="btn btn-link custom-link" routerLink="/movies/read-movies">
+          <i class="fa fa-angle-double-left fa-3x"></i>
+          <span class="d-block">Go Back</span>
+        </a>
+      </div>
+      <div class="col-lg-6">
+        <div class="card mt-5">
+          <div class="card-body">
+            <h2 class="card-title">{{ movieDetails?.title }} details</h2>
+            <div class="user-details">
+              <ng-container *ngIf="movieDetails.title">
+                <div>
+                  <label for="title"><b>Title:</b></label>
+                  <p>{{ movieDetails?.title }}</p>
+                </div>
+              </ng-container>
+              <ng-container *ngIf="movieDetails.category">
+                <div>
+                  <label for="category"><b>Category:</b></label>
+                  <p>{{ movieDetails?.category }}</p>
+                </div>
+              </ng-container>
+              <ng-container *ngIf="movieDetails.director">
+                <div>
+                  <label for="director"><b>Director:</b></label>
+                  <p>{{ movieDetails?.director }}</p>
+                </div>
+              </ng-container>
+              <ng-container *ngIf="movieDetails.releaseDate">
+                <div>
+                  <label for="releaseDate"><b>Release Date:</b></label>
+                  <p>{{ movieDetails?.releaseDate }}</p>
+                </div>
+              </ng-container>
+              <ng-container *ngIf="movieDetails.synopsis">
+                <div>
+                  <label for="synopsis"><b>Synopsis:</b></label>
+                  <p>{{ movieDetails?.synopsis }}</p>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

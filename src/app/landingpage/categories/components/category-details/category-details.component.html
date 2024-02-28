@@ -1,0 +1,44 @@
+<div class="container justify">
+    <div class="row justify-content-center">
+      <div class="col-lg-1">
+        <a class="btn btn-link custom-link" routerLink="/categories/read-categories">
+          <i class="fa fa-angle-double-left fa-3x"></i>
+          <span class="d-block">Go Back</span>
+        </a>
+      </div>
+      <div class="col-lg-6">
+        <div class="card mt-5">
+          <div class="card-body">
+            <h2 class="card-title">{{ categoryDetails?.categoryname }} details</h2>
+            <div class="category-details">
+              <ng-container *ngIf="categoryDetails.categoryname">
+                <div>
+                  <label for="categoryname"><b>Category Name:</b></label>
+                  <p>{{ categoryDetails?.categoryname }}</p>
+                </div>
+              </ng-container>
+              <ng-container *ngIf="categoryDetails.description">
+                <div>
+                  <label for="description"><b>Description:</b></label>
+                  <p>{{ categoryDetails?.description }}</p>
+                </div>
+              </ng-container>
+              <ng-container *ngIf="categoryDetails.numberOfMovies">
+                <div>
+                  <label for="numberOfMovies"><b>Number of movies:</b></label>
+                  <p>{{ categoryDetails?.numberOfMovies }}</p>
+                </div>
+              </ng-container>
+              <ng-container *ngIf="categoryDetails.status">
+                <div>
+                  <label for="status"><b>Status:</b></label>
+                  <p>{{ categoryDetails?.status }}</p>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

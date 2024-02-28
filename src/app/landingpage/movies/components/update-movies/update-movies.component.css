@@ -1,0 +1,10 @@
+.custom-link {
+    color: purple;
+    margin-top: 30px;
+}
+.custom-link:hover {
+    color: black;
+}
+.card{
+    margin-bottom: 30px;
+}

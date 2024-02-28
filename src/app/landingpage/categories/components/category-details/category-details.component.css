@@ -1,0 +1,18 @@
+.custom-link {
+    color: purple; /* Change this to your desired color */
+    margin-top: 30px;
+}
+.custom-link:hover {
+    color: black; /* Change this to your desired hover color */
+}
+.justify{
+    margin-top: 40px;
+}
+.card-title{
+    margin-bottom: 10px;
+    border-bottom: 1px dotted lightslategray;
+}
+.card{
+    margin-bottom: 20%;
+}
+

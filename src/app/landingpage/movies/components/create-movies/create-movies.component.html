@@ -1,0 +1,65 @@
+<div class="container justify">
+    <div class="row justify-content-center">
+        <div class="col-lg-1">
+            <a class="btn btn-link custom-link" routerLink="/movies/read-movies">
+                <i class="fa fa-angle-double-left fa-3x"></i>
+                <span class="d-block">Go Back</span>
+            </a>
+        </div>
+        <div class="col-lg-6">
+            <div class="card mt-5">
+                <div class="card-body">
+                    <h2 class="card-title">Add New Movie</h2>
+                    <form [formGroup]="createMovieForm" (ngSubmit)="onSubmit()">
+                        <div class="mb-3">
+                            <label for="title" class="form-label">Title</label>
+                            <input type="text" id="title" class="form-control" formControlName="title" required>
+                            <div *ngIf="createMovieForm.get('title')?.touched && createMovieForm.get('title')?.errors"
+                                class="invalid-feedback">
+                                Title is required.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="category" class="form-label">Category</label>
+                            <select id="category" class="form-select" formControlName="category" required>
+                                <option *ngFor="let category of categoryList" [value]="category.categoryname">
+                                    {{ category.categoryname }}
+                                </option>
+                            </select>
+                            <div *ngIf="createMovieForm.get('category')?.touched && createMovieForm.get('category')?.errors"
+                                class="invalid-feedback">
+                                Category is required.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="director" class="form-label">Director</label>
+                            <input type="text" id="director" class="form-control" formControlName="director" required>
+                            <div *ngIf="createMovieForm.get('director')?.touched && createMovieForm.get('director')?.errors"
+                                class="invalid-feedback">
+                                Director is required.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="releaseDate" class="form-label">Release date</label>
+                            <input type="date" id="releaseDate" class="form-control" formControlName="releaseDate" required>
+                            <div *ngIf="createMovieForm.get('releaseDate')?.touched && createMovieForm.get('releaseDate')?.errors"
+                                class="invalid-feedback">
+                                Release date is required.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="synopsis" class="form-label">Synopsis:</label>
+                            <textarea id="synopsis" class="form-control" formControlName="synopsis"
+                                placeholder="Enter synopsis here" rows="3"></textarea>
+                            <div *ngIf="createMovieForm.get('synopsis')?.touched && createMovieForm.get('synopsis')?.errors"
+                                class="invalid-feedback">
+                                Synopsis is required.
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-dark" [disabled]="!createMovieForm.valid">Create Movie</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

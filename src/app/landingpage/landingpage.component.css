@@ -1,0 +1,31 @@
+.navbar {
+    background-color: purple;
+    height: 100px;
+  }
+.nav-item{
+    margin-right: 30px;
+}
+.nav-link{
+    color: azure;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.btn{
+    font-family: 'Courier New', Courier, monospace;
+}
+.form-control{
+    font-family: 'Courier New', Courier, monospace;
+}
+.rounded-circle{
+    width: 130px;
+}
+.footer{
+    background-color: purple;
+    margin-bottom: 0px!important;
+}
+.align-middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+}

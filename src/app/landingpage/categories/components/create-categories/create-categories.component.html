@@ -1,0 +1,58 @@
+<div class="container justify">
+    <div class="row justify-content-center">
+        <div class="col-lg-1">
+            <a class="btn btn-link custom-link" routerLink="/categories/read-categories">
+                <i class="fa fa-angle-double-left fa-3x"></i>
+                <span class="d-block">Go Back</span>
+            </a>
+        </div>
+        <div class="col-lg-6">
+            <div class="card mt-5">
+                <div class="card-body">
+                    <h2 class="card-title">Add New Category</h2>
+                    <form [formGroup]="createCategoryForm" (ngSubmit)="onSubmit()">
+                        <div class="mb-3">
+                            <label for="categoryname" class="form-label">Category Name:</label>
+                            <input type="text" id="categoryname" class="form-control" formControlName="categoryname" required>
+                            <div *ngIf="createCategoryForm.get('categoryname').touched && createCategoryForm.get('categoryname').errors"
+                                class="invalid-feedback">
+                                Category name is required.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Description:</label>
+                            <textarea id="description" class="form-control" formControlName="description"
+                                placeholder="Enter description here" rows="3"></textarea>
+                            <div *ngIf="createCategoryForm.get('description').touched && createCategoryForm.get('description').errors"
+                                class="invalid-feedback">
+                                Description is required.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="numberOfMovies" class="form-label">Number of movies:</label>
+                            <input type="number" id="numberOfMovies" class="form-control" formControlName="numberOfMovies" required>
+                            <div *ngIf="createCategoryForm.get('numberOfMovies').touched && createCategoryForm.get('numberOfMovies').errors"
+                                class="invalid-feedback">
+                                Number of movies is required.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="status" class="form-label">Status:</label>
+                            <select id="status" formControlName="status" class="form-select" required>
+                                <option value="">Select Status</option>
+                                <option value="Active">Active</option>
+                                <option value="Inactive">Inactive</option>
+                            </select>
+                            <div *ngIf="createCategoryForm.get('status').touched && createCategoryForm.get('status').errors" class="invalid-feedback">
+                                <small class="text-danger" *ngIf="createCategoryForm.get('status').errors['required']">
+                                    Status is required.
+                                </small>
+                            </div>
+                        </div>                        
+                        <button type="submit" class="btn btn-dark" [disabled]="!createCategoryForm.valid">Create Category</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
