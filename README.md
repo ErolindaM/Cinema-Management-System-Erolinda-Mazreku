@@ -1,12 +1,12 @@
 # About this project
 
-This Cinema Management System is a web application that allows users to manage movies efficiently. On the home page, you can see a list of movies displayed for easy browsing. The system supports full CRUD (Create, Read, Update, Delete) operations for movies, enabling users to add new movies, edit existing ones, or remove them.
+This Cinema Management System is a web application designed to help users manage movies efficiently. The homepage displays a list of movies for easy browsing and navigation. The system supports full CRUD (Create, Read, Update, Delete) functionality, allowing users to add new movies, update existing ones, or delete them as needed.
 
-A key feature is the ability to add and manage categories. When creating or editing a movie, you can select from the available categories, helping to organize movies by genre or type. This categorization improves movie management and filtering within the app.
+One of the key features of the application is category management. Users can first create categories (such as genres or movie types) and then assign them when adding or editing movies. This categorization makes it easier to organize and filter movies within the system, enhancing overall usability.
 
 Try it live here: https://erolindam.github.io/Cinema-Management-System-Erolinda-Mazreku/
 
-# CinemaManagementSystem
+## CinemaManagementSystem
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.
 
